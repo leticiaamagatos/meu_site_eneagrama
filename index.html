@@ -1,0 +1,201 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo do Eneagrama</title>
+    <style>
+        /* --- ESTILOS CSS --- */
+        :root {
+            --rosa-escuro: #d44179;
+            --rosa-medio: #ef709b;
+            --rosa-claro: #fbebf1;
+            --rosa-fundo: #fff5f8;
+            --texto: #4a3b40;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--rosa-fundo);
+            color: var(--texto);
+            line-height: 1.6;
+        }
+
+        /* Menu de Navegação */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(212, 65, 121, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--rosa-escuro);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--texto);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--rosa-escuro);
+        }
+
+        /* Seção Principal */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: var(--rosa-escuro);
+            margin-bottom: 10px;
+        }
+
+        .subtitulo {
+            font-size: 1.2rem;
+            color: var(--rosa-medio);
+            margin-bottom: 40px;
+        }
+
+        /* Imagem e Conteúdo */
+        .conteudo-principal {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .conteudo-principal img {
+            max-width: 350px;
+            width: 100%;
+            border-radius: 10px;
+            border: 3px solid var(--rosa-claro);
+        }
+
+        .texto-info h2 {
+            color: var(--rosa-escuro);
+            margin-bottom: 15px;
+        }
+
+        /* Botão Interativo */
+        .btn-interativo {
+            background-color: var(--rosa-escuro);
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(214, 65, 121, 0.3);
+        }
+
+        .btn-interativo:hover {
+            background-color: var(--rosa-medio);
+            transform: translateY(-2px);
+        }
+
+        /* Responsividade para celulares */
+        @media (max-width: 768px) {
+            .conteudo-principal {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">✦ Eneagrama_</div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">O que é?</a></li>
+                <li><a href="caracteristicas.html">Os 9 Tipos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" id="home">
+        <h1>Conheça os 9 padrões de personalidade</h1>
+        <p class="subtitulo">Uma jornada de autoconhecimento através do Eneagrama</p>
+
+        <section class="conteudo-principal" id="sobre">
+            <img src="https://www.youniquebrasil.com/uploads/3/7/0/8/37080255/eneagrama_orig.jpg" alt="Ilustração de autoconhecimento e conexões">
+            
+            <div class="texto-info">
+                <h2>O que é o Eneagrama?</h2>
+                <p>O Eneagrama é um mapa de autoconhecimento que descreve nove tipos de Padrões de personalidade geometricamente interconectados. Ele ajuda a entender nossas motivações mais profundas, medos, desejos e caminhos de crescimento pessoal.</p>
+                
+                <button class="btn-interativo" id="btnMostrar">Ver Características</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<section class="conteudo-principal" id="sobre">
+    <img src="https://www.youniquebrasil.com/uploads/3/7/0/8/37080255/eneagrama_orig.jpg" alt="Ilustração de autoconhecimento e conexões">
+    
+    <div class="texto-info">
+        <h2>O que é o Eneagrama?</h2>
+        <p>O Eneagrama é um mapa de autoconhecimento que descreve nove tipos de Padrões de personalidade geometricamente interconectados. Ele ajuda a entender nossas motivações mais profundas, medos, desejos e caminhos de crescimento pessoal.</p>
+        
+        <button class="btn-interativo" id="btnMostrar">Ver Características</button>
+
+        <div id="listaTipos" class="lista-tipos-oculta">
+            <div class="tipo-item"><strong>Tipo 1 (O Perfeccionista):</strong> Focado em melhoria contínua, organização e ética. Busca fazer o que é certo e teme a corrupção ou o erro.</div>
+            <div class="tipo-item"><strong>Tipo 2 (O Prestativo):</strong> Empático e generoso. Foca nas necessidades dos outros e busca se sentir amado, temendo ser indesejado ou inútil.</div>
+            <div class="tipo-item"><strong>Tipo 3 (O Bem-Sucedido):</strong> Focado em metas, eficiência e resultados. Busca o sucesso para ter valor e teme o fracasso ou a rejeição.</div>
+            <div class="tipo-item"><strong>Tipo 4 (O Individualista):</strong> Sensível, expressivo e autêntico. Busca ser único e verdadeiro, temendo não ter identidade ou significado pessoal.</div>
+            <div class="tipo-item"><strong>Tipo 5 (O Observador):</strong> Analítico, curioso e reservado. Busca entender como o mundo funciona e teme ser incapaz ou invadido.</div>
+            <div class="tipo-item"><strong>Tipo 6 (O Questionador):</strong> Leal, cauteloso e analítico. Busca segurança e antecipa riscos, temendo ficar sem apoio ou orientação.</div>
+            <div class="tipo-item"><strong>Tipo 7 (O Sonhador):</strong> Entusiasta, otimista e multitarefas. Busca novas experiências e alegria, temendo a dor, o sofrimento ou a limitação.</div>
+            <div class="tipo-item"><strong>Tipo 8 (O Confrontador):</strong> Assertivo, protetor e independente. Busca o controle do próprio destino e justiça, temendo ser controlado ou vulnerável.</div>
+            <div class="tipo-item"><strong>Tipo 9 (O Pacifista):</strong> Pacífico, flexível e agregador. Busca a harmonia interior e exterior, temendo o conflito e a ruptura com os outros.</div>
+        </div>
+    </div>
+</section>
